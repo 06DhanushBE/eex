@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Data Visualization</title>
+</head>
+<body>
+    
+    
+    <div class="container">
+        <div class="datatable">
+            {{ table_html | safe }}
+        </div>
+    </div>
+
+    <h1>select type of plot</h1>
+    
+
+    <div class="select_type">
+        <form method="post">
+            <label><input type="radio" name="plot_type" value="bar"> Bar</label>
+            <label><input type="radio" name="plot_type" value="line"> Line</label>
+            <label><input type="radio" name="plot_type" value="scatter"> Scatter</label>
+            <label><input type="radio" name="plot_type" value="box"> Box </label>
+            <input type="submit" value="Submit">
+        </form>
+
+
+        <div class="chart-container" style="display: {% if chart_data %}block{% else %}none{% endif %}">
+            {% for chart_url, column in chart_data %}
+                <h2>{{ column }}</h2>
+                <img src="data:image/png;base64,{{ chart_url }}" alt="{{ column }}">
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>

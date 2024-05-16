@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #feefef; 
+    color: #333; 
+}
+
+.container {
+    margin: 0;
+    width: 100%;
+    margin-right: 10px;
+    height: 70vh;
+    overflow: scroll;
+    padding: 20px;
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555; 
+}
+
+.datatable {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #82f24a;
+    color: #03040e; 
+}
+
+td {
+    background: #aee096;
+}
+
+.select_type {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.select_type form {
+    margin-bottom: 20px;
+}
+
+.select_type label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.select_type input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.select_type input[type="submit"] {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.select_type input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.chart-container {
+    margin: 20px auto; 
+    width: 80%; 
+    max-width: 100%; 
+    text-align: center;
+}
+
+.chart-container h2 {
+    margin-bottom: 10px;
+}
+
+.chart-container img {
+    max-width: 100%; 
+    height: auto;
+    display: inline-block; 
+    margin: 0 auto;
+}
